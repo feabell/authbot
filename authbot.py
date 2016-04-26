@@ -2,9 +2,9 @@ import discord
 import asyncio
 from discord.ext import commands
 import random
+import yaml
 
-config = yaml.load(file('services.conf', 'r'))
-
+config = yaml.load(open('authbot.conf', 'r'))
 BOT_TOKEN = config['BOT_TOKEN']
 
 description = '''An example bot to showcase the discord.ext.commands extension
