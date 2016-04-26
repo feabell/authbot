@@ -3,6 +3,10 @@ import asyncio
 from discord.ext import commands
 import random
 
+config = yaml.load(file('services.conf', 'r'))
+
+BOT_TOKEN = config['BOT_TOKEN']
+
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
 There are a number of utility commands being showcased here.'''
@@ -48,4 +52,4 @@ should just happen automagically from there!"""
 
       yield from bot.send_message(message.author, content) 
 
-bot.run('MTc0NDY0MDExMTkzMTU1NTg0.CgDSag.n1CHjPS2MOcI7itu1rscP1oTCHo')
+bot.run(BOT_TOKEN)
