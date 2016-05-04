@@ -3,7 +3,7 @@ import asyncio
 from discord.ext import commands
 import random
 import yaml
-#import logging
+import logging
 
 
 logging.basicConfig(filename='authbot.log', level=logging.INFO)
