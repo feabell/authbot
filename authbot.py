@@ -3,6 +3,10 @@ import asyncio
 from discord.ext import commands
 import random
 import yaml
+#import logging
+
+
+logging.basicConfig(filename='authbot.log', level=logging.INFO)
 
 config = yaml.load(open('authbot.conf', 'r'))
 BOT_TOKEN = config['BOT_TOKEN']
@@ -15,10 +19,10 @@ bot = commands.Bot(command_prefix='?', description=description)
 @bot.event
 @asyncio.coroutine 
 def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
-    print('------')
+    logging.info('Logged in as')
+    logging.info(bot.user.name)
+    logging.info(bot.user.id)
+    logging.info('------')
 
 @bot.event
 @asyncio.coroutine
@@ -26,7 +30,7 @@ def on_message(message):
 
    if message.content.startswith('!authme'):
       #open a private conversation
-      print("[LOG] !authme received from " + str(message.author))
+      logging.info("[LOG] !authme received from " + str(message.author))
       
       content = """Thankyou for authing to the WiNGSPAN Discord Service!
 
@@ -40,7 +44,7 @@ Once you have verified this.  Please type !getonwithit"""
 
    if message.content.startswith('!getonwithit'):
       #getting on with it
-      print("[LOG] !getonwithit received from " + str(message.author))
+      logging.info("[LOG] !getonwithit received from " + str(message.author))
 
       content = """Please click the following link to authorise me to access 
 your email account details:
