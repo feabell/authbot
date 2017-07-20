@@ -36,7 +36,10 @@ def on_message(message):
 
 Before we continue, please make sure that you have provided your email to 
 Discord (from the "User Settings" cog at the bottom left) and are connected to Discord 
-using the same email address that you provided to https://services.torpedodelivery.com
+using the same email address that you provided to 
+
+      <https://services.torpedodelivery.com>
+
 and that you have clicked the link sent to you by discord to verify your account.
 
 Once you have verified this.  Please type !getonwithit"""
@@ -49,7 +52,7 @@ Once you have verified this.  Please type !getonwithit"""
       content = """Please click the following link to authorise me to access 
 your email account details:
 
-     https://services.torpedodelivery.com/discordauth
+     <https://services.torpedodelivery.com/discordauth>
 
 You will be redirected to the services.torpedodelivery.com site, and everything
 should just happen automagically from there!"""
